@@ -14,4 +14,4 @@ RUN ./mvnw -B clean package -DskipTests
 EXPOSE 8088
 
 #Comando para rodar o projeto publicado
-CMD ["java", "-jar", "target/projetoApiAgenda-0.0.1-SNAPSHOT.jar"
+CMD ["java", "-jar", "target/projetoApiAgendaW-0.0.1-SNAPSHOT.jar"]
