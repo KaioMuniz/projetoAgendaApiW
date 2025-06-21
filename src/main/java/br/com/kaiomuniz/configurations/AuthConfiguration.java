@@ -1,4 +1,5 @@
 package br.com.kaiomuniz.configurations;
+
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,7 @@ public class AuthConfiguration {
 		
 		//Registrando o filter criado para autenticação
 		var filter = new FilterRegistrationBean<AuthenticationFilter>();
+		filter.setFilter(new AuthenticationFilter());
 		
 		//Aplicando o filtro para todos os endpoints da API]
 		filter.addUrlPatterns("/api/*");
